@@ -31,7 +31,7 @@ namespace GradeCalculator
             //Input module data
             for (int i = 0; i < numnberOfModules; i++)
             {
-                Console.WriteLine("Enter module details {i + 1}:");
+                Console.WriteLine("Enter module details:");
                 Console.Write("Module ID: ");
                 string moduleid = Console.ReadLine();
 
@@ -51,7 +51,7 @@ namespace GradeCalculator
             double weightedAverage = CalculateWeightedAverage(modules);
             double bestAverage = CalculateBestAverage(modules);
 
-            Console.WriteLine($"Weighted Average Mark: {weightedAverage:F2} - Classification: {GetClassification(weightedAverage)}");
+            Console.WriteLine($"Weighted Average Mark: {weightedAverage:F2} - Classification: {GetClassification(weightedAverage)}\n"); //Used "\n" to create new line in oputput message
             Console.WriteLine($"Best Average Mark (after removing worst grade: {bestAverage:F2} - Classification: {GetClassification(bestAverage)}");
         }
 
